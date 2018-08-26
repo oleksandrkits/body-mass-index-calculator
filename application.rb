@@ -1,5 +1,7 @@
 require_relative "bmi"
+require_relative "input_handler"
 
-bmi = BMI.new(1.98, 80)
+input = InputHandler.new
+bmi = BMI.new(input.height, input.weight)
 
 puts bmi.bmi
