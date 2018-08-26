@@ -1,9 +1,16 @@
-puts "Input your height and weight..."
+class InputHandler
 
-print 'Height: '
-height = $stdin.gets.chomp
+  attr_reader :height, :weight
 
-print 'Weight: '
-weight = $stdin.gets.chomp
+  def initialize
+    puts "Input your height and weight..."
 
-puts "So, you are #{height} tall and your weight is #{weight}"
+    print 'Height: '
+    @height = $stdin.gets.chomp.to_f
+
+    print 'Weight: '
+    @weight = $stdin.gets.chomp.to_f
+
+    puts "So, you are #{height} tall and your weight is #{weight}"
+  end
+end
